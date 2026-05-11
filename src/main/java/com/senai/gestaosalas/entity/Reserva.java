@@ -28,7 +28,7 @@ public class Reserva implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
-
+    
     public Reserva(){
     }
 
@@ -59,10 +59,6 @@ public class Reserva implements Serializable {
 
     public LocalDateTime getData_devolucao() {
         return data_pedido;
-    }
-
-    public void setData_devolucao(LocalDateTime data_devolucao) {
-        this.data_pedido = data_pedido;
     }
 
     public boolean getStatus() {

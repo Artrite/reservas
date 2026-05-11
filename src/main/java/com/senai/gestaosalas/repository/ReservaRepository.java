@@ -12,7 +12,7 @@ import java.util.List;
 @Transactional
 public interface ReservaRepository  extends JpaRepository<Reserva, Long> {
 
-    @Query("select r from Reserva r where r.usuario.id = :id")
+    @Query("select r from Reserva r where r.usuario.id_usuario = :id")
     List<Reserva> findByidUsuario(Long id);
 
     @Query("select r.id from Reserva r where r.usuario.id = :id and r.status = true ")
